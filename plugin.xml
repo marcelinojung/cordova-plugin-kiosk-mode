@@ -34,7 +34,7 @@
             <activity
                 android:name="de.amicaldo.cordova.plugin.KioskModeActivity"
                 android:keepScreenOn="true"
-                android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
+		android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
 		android:exported="true"
             ></activity>
         </edit-config>
@@ -51,7 +51,7 @@
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <receiver android:name="de.amicaldo.cordova.plugin.MyPackageReplacedEventReceiver">
+            <receiver android:name="de.amicaldo.cordova.plugin.MyPackageReplacedEventReceiver" android:exported="true"/>
                 <intent-filter>
                     <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
                 </intent-filter>
